@@ -4,6 +4,13 @@
   <title>User Profiles</title>
 </head>
 <body ng-controller="MainController">
+
+
+
+  <button ng-click="previous()" ng-disabled="currentPage === 1">previous</button>
+  Page: {{currentPage}} of {{totalPages}}
+  <button ng-click="next()" ng-disabled="currentPage === totalPages">next</button>
+
   <div ng-repeat="user in users">
     <h1>{{user.first_name}} {{user.last_name}}</h1>
     <img src="{{user.avatar}}">
